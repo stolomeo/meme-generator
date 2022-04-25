@@ -12,34 +12,54 @@ code {
     monospace;
 }
 header {
-  position: absolute;
-  width: 550px;
+  display: flex;
+  align-items: center;
   height: 65px;
-  left: 0px;
-  top: 0px;
-
   background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  color: white;
+  padding: 20px;
 }
 .header-img {
-  position: absolute;
-  width: 31.31px;
-  height: 26.22px;
-  left: 20px;
-  top: 19px;
+  height: 100%;
+  margin-right: 6px;
 }
 .header-title {
-  position: absolute;
-  width: 140.79px;
-  height: 24px;
-  left: 58px;
-  top: 21px;
-
   font-family: "Karla";
   font-style: normal;
   font-weight: 700;
-  font-size: 20.7482px;
+  font-size: 20px;
   line-height: 24px;
   letter-spacing: -0.1em;
 
   color: #ffffff;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+form {
+  display: grid;
+  grid-template: 40px 40px / 1fr 1fr;
+  gap: 17px;
+  width: 30%;
+}
+.main-form-input {
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  border: 1px solid #d5d4d8;
+  text-indent: 5px;
+}
+.main-form-btn {
+  grid-column: 1 / -1;
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+}
+.main-img-meme {
+  position: absolute;
+  width: 477px;
+  height: 268px;
+  left: 36px;
+  top: 227px;
+
+  border-radius: 2px;
 }
