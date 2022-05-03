@@ -1,10 +1,10 @@
 import Header from "./components/Header";
-import Content from "./components/Content";
+import Meme from "./components/Meme";
 function App() {
   return (
     <>
       <Header />
-      <Content />
+      <Meme />
     </>
   );
 }
