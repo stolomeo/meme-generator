@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -13,16 +14,22 @@ main {
 
 .header {
   display: flex;
+  font-family: "Koulen", cursive;
   align-items: center;
   height: 65px;
+  font-size: 24px;
   background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
   color: white;
   padding: 20px;
+  justify-content: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.header--image {
-  height: 100%;
-  margin-right: 6px;
+.header img {
+  width: 60px;
+  margin-right: 1rem;
 }
 
 .header--title {
@@ -38,34 +45,55 @@ main {
 .form {
   display: grid;
   grid-template: 40px 40px / 1fr 1fr;
-  gap: 17px;
-  margin-bottom: 17px;
+  gap: 2rem;
+  width: 50%;
+  margin: auto;
 }
 
 .form--input {
   font-family: "Karla", sans-serif;
+  font-size: 18px;
   border-radius: 5px;
   border: 1px solid #d5d4d8;
   text-indent: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .form--button {
   grid-column: 1 / -1;
-  font-family: "Karla", sans-serif;
+  font-family: "Koulen", cursive;
+  font-size: 22px;
   border-radius: 5px;
   background: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
   color: white;
   border: none;
+  width: 40%;
+  height: 40px;
+  margin: auto;
+  transition: 0.2s all;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.form--button:hover {
+  transform: scale(1.1);
   cursor: pointer;
 }
 
+.form--button:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
 .meme {
+  margin-top: 2rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .meme--image {
   max-width: 100%;
-  border-radius: 3px;
+  border-radius: 1rem;
 }
 
 .meme--text {
