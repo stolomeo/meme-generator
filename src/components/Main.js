@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import React, { useState, useEffect } from "react";
-import Inputs from "./Inputs";
-import MemeContent from "./MemeContent";
-import NewMemeBtn from "./NewMemeBtn";
+import Inputs from "./Meme/Inputs";
+import MemeContent from "./Meme/MemeContent";
+import NewMemeBtn from "./Meme/NewMemeBtn";
 
 export default function Main() {
   const [meme, setMeme] = useState({

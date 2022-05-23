@@ -3,10 +3,11 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
     * {
         box-sizing: border-box;
+        padding: 0;
+        margin: 0;
     }
 
     body {
         font-family: "Karla", sans-serif;
-        margin: 0;
     }
 `;
