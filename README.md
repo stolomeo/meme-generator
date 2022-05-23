@@ -16,3 +16,4 @@ npm start
 ## Built with
 
 - [React](https://reactjs.org/)
+- [styled-components](https://www.npmjs.com/package/styled-components)
