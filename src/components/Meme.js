@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React, { useState, useEffect } from "react";
+import Inputs from "./Inputs";
 
 export default function Meme() {
   const [meme, setMeme] = useState({
@@ -35,23 +36,8 @@ export default function Meme() {
   return (
     <main>
       <Form>
-        <Input
-          type="text"
-          placeholder="Top text"
-          name="topText"
-          value={meme.topText}
-          onChange={handleChange}
-        />
-        <Input
-          type="text"
-          placeholder="Bottom text"
-          name="bottomText"
-          value={meme.bottomText}
-          onChange={handleChange}
-        />
-        <Button className="form--button" onClick={getMemeImage}>
-          Get a new meme image 🖼
-        </Button>
+        <Inputs meme={meme} handleChange={handleChange} />
+        <Button onClick={getMemeImage}>Get a new meme image 🖼</Button>
       </Form>
       <MemeWrapper>
         <MemeImage src={meme.randomImage} alt="meme" />
@@ -69,15 +55,6 @@ const Form = styled.div`
   width: 50%;
   margin: auto;
   margin-top: 2rem;
-`;
-
-const Input = styled.input`
-  font-family: "Karla", sans-serif;
-  font-size: 18px;
-  border-radius: 5px;
-  border: 1px solid #d5d4d8;
-  text-indent: 5px;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 `;
 
 const Button = styled.button`
