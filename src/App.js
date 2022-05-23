@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import Meme from "./components/Meme";
+import Main from "./components/Main";
 import { GlobalStyles } from "./GlobalStyle.style";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
       <GlobalStyles />
       <Header />
-      <Meme />
+      <Main />
     </>
   );
 }

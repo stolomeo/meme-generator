@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import React, { useState, useEffect } from "react";
 import Inputs from "./Inputs";
+import MemeContent from "./MemeContent";
 
-export default function Meme() {
+export default function Main() {
   const [meme, setMeme] = useState({
     topText: "",
     bottomText: "",
@@ -40,9 +41,7 @@ export default function Meme() {
         <Button onClick={getMemeImage}>Get a new meme image 🖼</Button>
       </Form>
       <MemeWrapper>
-        <MemeImage src={meme.randomImage} alt="meme" />
-        <Text style={{ top: 0 }}>{meme.topText}</Text>
-        <Text style={{ bottom: 0 }}>{meme.bottomText}</Text>
+        <MemeContent meme={meme} />
       </MemeWrapper>
     </main>
   );
@@ -87,27 +86,4 @@ const MemeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-const MemeImage = styled.img`
-  max-width: 100%;
-  border-radius: 1rem;
-`;
-
-const Text = styled.h2`
-  position: absolute;
-  width: 80%;
-  text-align: center;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 15px 0;
-  padding: 0 5px;
-  font-family: impact, sans-serif;
-  font-size: 2em;
-  text-transform: uppercase;
-  color: white;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
-    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
-    2px 2px 5px #000;
 `;
